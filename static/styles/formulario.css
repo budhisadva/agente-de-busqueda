@@ -1,0 +1,35 @@
+main {
+  width: 96%;
+  & .formulario {
+    width: 100%;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0 20px;
+}
+
+.form-dato {
+  width: 84px;
+}
+
+.btn {
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  background-color: darkorchid;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:active {
+  background-color: rgba(148, 0, 211, 0.4);
+}

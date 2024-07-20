@@ -1,0 +1,41 @@
+.laberinto {
+  background-color: #5e5e5e;
+  position: relative;
+  width: 100%;
+  height: 540px;
+  border-radius: 5px;
+  overflow: scroll;
+  display: grid;
+  gap: 4px;
+}
+
+.carta {
+  border-radius: 5px;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+  width: 100%;
+  height: 100%;
+}
+
+.visitado {
+  transform: rotateY(180deg);
+}
+
+.frente {
+  position: absolute;
+  background-color: #515151;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.dorso {
+  position: absolute;
+  background-color: #3ed2e5;
+  backface-visibility: hidden;
+  transform: rotateX(180deg);
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}

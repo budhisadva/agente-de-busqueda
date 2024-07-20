@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Web sockets</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script defer type="module" src="{{ url_for('static', filename='src/index.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"
+            integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA=="
+            crossorigin="anonymous">
+    </script>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <div class="titulo">Algoritmos de búsqueda</div>
+      </header>
+      <main>
+        <form class="formulario" id="formulario">
+          <div class="form-grupo">
+            <label for="form-row" class="form-etiqueta">Renglones</label>
+            <input type="number" name="renglones" class="form-dato" id="form-row">
+          </div>
+          <div class="form-grupo">
+            <label for="form-col" class="form-etiqueta">Columnas</label>
+            <input type="number" name="columnas" class="form-dato" id="form-col">
+          </div>
+          <div class="form-grupo">
+            <label for="form-alg" class="form-etiqueta">Algoritmo</label>
+            <select class="form-dato" name="algoritmo" id="form-alg">
+              <option value="bfs">BFS</option>
+              <option value="dfs">DFS</option>
+              <option value="greedy">Greedy</option>
+            </select>
+          </div>
+          <div class="form-grupo">
+            <input type="submit" value="Crear" class="btn">
+          </div>
+          <div class="form-grupo">
+            <button type="button" id="btn-iniciar" class="btn">Iniciar</button>
+          </div>
+        </form>
+        <div class="laberinto"></div>
+      </main>
+    </div>
+  </body>
+</html>
